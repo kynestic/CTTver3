@@ -238,6 +238,8 @@
             function groupRemove(group_remover){
                 group_remover = group_remover.parentElement;
                 group_remover = group_remover.parentElement;
+                let decision = confirm("Bạn muốn xóa nhóm thông tin?");
+                if (decision == false) return;
                 group_remover.remove();
             }
 
@@ -256,6 +258,8 @@
             function itemRemove(item_remover){
                 item_remover = item_remover.parentElement;
                 item_remover = item_remover.parentElement;
+                let decision = confirm("Bạn muốn xóa trường thông tin?");
+                if (decision == false) return;
                 item_remover.remove();
             }
 
