@@ -283,6 +283,11 @@
             function confirmText(confirm_text){
                 confirm_text = confirm_text.parentElement;
                 confirm_text = confirm_text.firstChild;
+                confirm_text.value = confirm_text.value.trim();
+                if(confirm_text.value == ''){
+                    alert("Xin vui lòng nhập thông tin!");
+                    return;
+                }
                 let tmpText = confirm_text.value;
                 confirm_text = confirm_text.parentElement;
                 let tmp = document.createElement('span');
